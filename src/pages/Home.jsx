@@ -1,11 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { LayoutMain } from '../components/Layout';
 
 export const Home = () => {
   return (
-    <div>
+    <LayoutMain contentComponent={HomeContent}/>
+  );
+};
+
+export const HomeContent = () => {
+  return (
+    <>
       <h1>Home</h1>
-      <Link to="/employees">Employees</Link>
-    </div>
+    </>
   );
 };

@@ -1,0 +1,55 @@
+@import './variables.scss';
+
+.layout-main {
+  height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  background-color: $background-light;
+
+  display: grid;
+  grid-template-columns: minmax(50px, 200px) auto;
+
+  &__sidebar {
+    max-width: 200px;
+    background-color: $primary;
+    color: white;
+    
+    &--header {
+      height: 55px;
+      padding: 10px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      background-color: $secondary;
+      font-size: 16px;
+    }
+
+    &--link {
+      padding: 15px;
+      border-left: solid 5px $primary;
+
+      &:hover {
+        border-left: solid 5px white;
+      }
+    }
+
+    &--link-icon {
+      width: 20px;
+      height: 20px;
+      padding-right: 20px;
+    }
+
+    a {
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+      padding-right: 20px;
+    }
+  }
+
+  &__content {
+    padding: 10px;
+  }
+}
