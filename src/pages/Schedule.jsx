@@ -3,14 +3,8 @@ import { LayoutMain } from '../components/Layout';
 
 export const Schedule = () => {
   return (
-    <LayoutMain contentComponent={ScheduleContent}/>
-  );
-};
-
-export const ScheduleContent = () => {
-  return (
-    <>
+    <LayoutMain>
       <h1>Schedule</h1>
-    </>
+    </LayoutMain>
   );
 };

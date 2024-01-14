@@ -7,12 +7,12 @@ import { faCalendar, faHouse, faUsers } from '@fortawesome/free-solid-svg-icons'
 
 import '../assets/styles/Layout.scss';
 
-export const LayoutMain = ({ contentComponent: ContentComponent }) => {
+export const LayoutMain = ({children}) => {
   return (
     <div className="layout-main">
       <Sidebar />
       <section className="layout-main__content">
-        <ContentComponent />
+        {children}
       </section>
     </div>
   );
@@ -45,7 +45,7 @@ const SideBarMenu = () => {
         </Link>
       </div>
       <div className="layout-main__sidebar--link">
-        <Link to="/about">
+        <Link to="/schedule">
           <FontAwesomeIcon icon={faCalendar} className="layout-main__sidebar--link-icon" /> 
           <span>Schedule</span> 
         </Link>
