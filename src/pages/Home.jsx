@@ -3,14 +3,8 @@ import { LayoutMain } from '../components/Layout';
 
 export const Home = () => {
   return (
-    <LayoutMain contentComponent={HomeContent}/>
-  );
-};
-
-export const HomeContent = () => {
-  return (
-    <>
+    <LayoutMain>
       <h1>Home</h1>
-    </>
+    </LayoutMain>
   );
 };
