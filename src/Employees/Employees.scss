@@ -3,6 +3,14 @@
 .employees {
 
   &__header {
+    &--title {
+      color: $primary;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0 auto;
+      padding: 20px 10px;
+    }
+
     &--menu {
       display: inline-grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -24,6 +32,20 @@
       border-top: solid 5px $primary;
       font-weight: bold;
       cursor: pointer;
+    }
+
+    &--breadcrumbs {
+      color: $secondary;
+      padding: 10px;
+    }
+
+    &--breadcrumbs-item {
+      display: inline-grid;
+      color: $secondary;
+      padding: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: capitalize;
     }
   }
 
@@ -100,18 +122,11 @@
         word-wrap: break-word;
       }
     }
-  }
-}
 
-.employee-details {
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-
-  h1 {
-    color: $primary;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0 0 10px 0;
+    &--name {
+      color: $primary;
+      font-weight: bold;
+      cursor: pointer;
+    }
   }
 }

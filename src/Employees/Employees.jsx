@@ -121,7 +121,8 @@ const ListContent = ({ data, isLoading }) => {
           return (
             <div key={`${i}-${d.employeeID}`} className="employees__list--row">
               <div>{i + 1}</div>
-              <div onClick={() => handleEmployeeClick(d.employeeID)} style={{cursor: 'pointer'}}>
+              <div onClick={() => handleEmployeeClick(d.employeeID)} 
+                className="employees__list--name" >
                 {d.lastName}, {d.firstName}
               </div>
               <div>{d.jobDescriptions}</div>
