@@ -7,10 +7,9 @@
   background-color: $background-light;
 
   display: grid;
-  grid-template-columns: minmax(50px, 200px) auto;
+  grid-template-columns: minmax(50px, 100px) auto;
 
   &__sidebar {
-    max-width: 200px;
     background-color: $primary;
     color: white;
     
@@ -26,26 +25,34 @@
       font-size: 16px;
     }
 
+    &--menu {
+      padding: 20px 0;
+    }
+
     &--link {
-      padding: 15px;
-      border-left: solid 5px $primary;
+      border-left: solid 5px transparent;
+      border-right: solid 5px transparent;
+      margin: 20px 0;
+      padding: 10px;
+
+      display: grid;
+      place-items: center;
 
       &:hover {
         border-left: solid 5px white;
+        cursor: pointer;
       }
     }
 
     &--link-icon {
-      width: 20px;
-      height: 20px;
-      padding-right: 20px;
+      width: 25px;
+      height: 25px;
     }
 
-    a {
-      color: white;
-      font-size: 16px;
-      text-decoration: none;
-      padding-right: 20px;
+    &--link-text {
+      font-size: 14px;
+      padding: 5px 0;
+      text-align: center;
     }
   }
 

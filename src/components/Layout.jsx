@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar, faHouse, faUsers } from '@fortawesome/free-solid-svg-icons';
@@ -30,25 +30,20 @@ const Sidebar = () => {
 }
 
 const SideBarMenu = () => {
+  const navigate = useNavigate();
   return (
     <section className="layout-main__sidebar--menu">
-      <div className="layout-main__sidebar--link">
-        <Link to="/">
-          <FontAwesomeIcon icon={faHouse} className="layout-main__sidebar--link-icon" />
-          <span>Home</span>
-        </Link> 
+      <div className="layout-main__sidebar--link" onClick={() => navigate('/')}>
+        <FontAwesomeIcon icon={faHouse} className="layout-main__sidebar--link-icon" />
+        <div className="layout-main__sidebar--link-text">Home</div>
       </div>
-      <div className="layout-main__sidebar--link">
-        <Link to="/employees">
-          <FontAwesomeIcon icon={faUsers} className="layout-main__sidebar--link-icon" />
-          <span>Employees</span>
-        </Link>
+      <div className="layout-main__sidebar--link" onClick={() => navigate('/employees')}>
+        <FontAwesomeIcon icon={faUsers} className="layout-main__sidebar--link-icon" />
+        <div className="layout-main__sidebar--link-text">Employees</div>
       </div>
-      <div className="layout-main__sidebar--link">
-        <Link to="/schedule">
-          <FontAwesomeIcon icon={faCalendar} className="layout-main__sidebar--link-icon" /> 
-          <span>Schedule</span> 
-        </Link>
+      <div className="layout-main__sidebar--link" onClick={() => navigate('/schedule')}>
+        <FontAwesomeIcon icon={faCalendar} className="layout-main__sidebar--link-icon" /> 
+        <div className="layout-main__sidebar--link-text">Schedule</div> 
       </div>
     </section>
   )
