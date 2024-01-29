@@ -1,0 +1,282 @@
+@import '../assets/styles/variables.scss';
+
+.schedule {
+  &__title {
+    color: $secondary;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+
+  &__control-panel {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+
+    margin: 10px 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+    font-size: 16px;
+
+    &--control {
+      display: grid;
+      grid-template-columns: 30px auto;
+      align-items: center;
+
+      padding: 0 10px;
+      background-color: white;
+      height: 100%;
+    }
+
+    &--icon {
+      color: $primary;
+      height: 25px;
+      width: 25px;
+    }
+
+    &--date-field {
+      border: none;
+      padding: 5px 10px;
+      font-size: 14px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &--dropdown {
+      width: calc(100% - 10px);
+      border: none;
+      padding: 5px 10px;
+      font-size: 16px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &--label {
+      padding: 5px 10px 0 10px;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $secondary;
+    }
+
+    &--button {
+      background-color: $primary;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px;
+      font-size: 14px;
+      font-weight: bold;
+
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $secondary;
+        color: white;
+      }
+
+      &:disabled {
+        background-color: $background-light;
+        color: $font-light;
+        cursor: not-allowed;
+      }
+
+      &:active {
+        background-color: $secondary;
+        color: white;
+      }
+    }
+
+    &--button-text {
+      padding-left: 7px;
+    }
+  }
+
+  &__grid {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+    margin: 10px 0;
+    padding: 10px;
+    height: calc(100vh - 200px);
+
+    font-size: 12px;
+
+    &--header {
+      background-color: $background-light;
+      display: grid;
+      grid-template-columns: 1fr repeat(7, 1fr);
+
+      > div {
+        padding: 10px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+
+    &--content {
+      overflow-y: scroll;
+      height: calc(100vh - 250px);
+    }
+
+    &--row {
+      display: grid;
+      grid-template-columns: 1fr repeat(7, 1fr);
+    }
+
+    &--cell-name {
+      padding: 10px;
+      border: solid 1px $background-light;
+    }
+
+    &--cell {
+      min-height: 40px;
+      padding: 10px;
+      border: solid 1px $background-light;
+      text-align: center;
+    }
+
+    &--mulitple-cell {
+      padding: 10px;
+      border: solid 1px $background-light;
+      text-align: center;
+    
+      display: grid;
+      grid-template-rows: 40px 40px;
+      grid-gap: 5px;
+    }
+
+    &--detail-date {
+      font-weight: bold;
+      font-size: 12px;
+      color: $font-light;
+      margin-bottom: 5px;
+    }
+
+    &--placeholder {
+      height: calc(100vh - 180px);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: $font-light;
+    }
+  }
+}
+
+.shift {
+  &__button-add {
+    background-color: $background-light;
+    color: $secondary;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 10px);
+    cursor: pointer;
+
+    &:hover {
+      background-color: $highlight;
+      color: white;
+    }
+
+    &:active {
+      background-color: $secondary-highlight;
+      color: white;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 25px;
+
+    background-color: $primary-opacity;
+    border: $primary solid 1px;
+    border-radius: 5px;
+
+    &--fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    input {
+      width: calc(100% - 10px);
+      padding: 5px 5px 0 5px;
+      background-color: transparent;
+      border: none;
+    
+      font-size: 14px;
+      font-weight: bold;
+      color: $primary;
+      text-align: center;
+    
+      &:focus {
+        outline: none;
+      }
+    }
+
+    select {
+      width: calc(100% - 10px);
+      background-color: transparent;
+      border: none;
+    
+      font-size: 10px;
+      font-weight: bold;
+      padding-bottom: 5px;
+      color: $primary;
+      text-align: center;
+    
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &--text-time {
+    }
+
+    &--text-section {
+    }
+
+    &--dropdown {
+      
+    }
+
+    &--remove-button {
+      border: none;
+      background-color: $primary;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $error;
+        color: white;
+      }
+
+      &:active {
+        background-color: $secondary-error;
+        color: white;
+      }
+    }
+  }
+}

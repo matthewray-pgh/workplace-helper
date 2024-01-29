@@ -4,7 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home.jsx";
 import { Employees } from "./Employees/Employees.jsx";
 import { EmployeeDetails } from "./Employees/EmployeeDetails.jsx";
-import { Schedule } from "./pages/Schedule.jsx";
+import { Schedule } from "./Schedule/Schedule.jsx";
+import { Settings } from "./Settings/Settings.jsx";
 
 import "./assets/styles/App.scss";
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/employees" element={<Employees />} />
         <Route path="/employees/:id" element={<EmployeeDetails />} />
         <Route path="/schedule" element={<Schedule />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </BrowserRouter>
   );

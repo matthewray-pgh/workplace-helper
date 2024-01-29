@@ -1,0 +1,178 @@
+[
+  {
+    "Applies To": "North Park Lounge - Murrysville",
+    "Job Id": "3bb8a525-5052-4631-9659-80c1bea8c9fd",
+    "Job Title": "Barback",
+    "Job Code": "",
+    "Pay Basis": "HOURLY",
+    "Default Wage": null,
+    "Tipped?": false,
+    "Cashier?": false,
+    "Driver?": false
+  },
+  {
+    "Applies To": "North Park Lounge - Murrysville",
+    "Job Id": "5accaf6b-ea70-4a04-853d-e53f659c4396",
+    "Job Title": "Bartender",
+    "Job Code": "",
+    "Pay Basis": "HOURLY",
+    "Default Wage": null,
+    "Tipped?": true,
+    "Cashier?": true,
+    "Driver?": false
+  },
+  {
+    "Applies To": "North Park Lounge - Murrysville",
+    "Job Id": "1a81b247-1286-4119-a774-ce6e09510338",
+    "Job Title": "Busser",
+    "Job Code": "",
+    "Pay Basis": "HOURLY",
+    "Default Wage": null,
+    "Tipped?": false,
+    "Cashier?": false,
+    "Driver?": false
+  },
+  {
+    "Applies To": "North Park Lounge - Murrysville",
+    "Job Id": "240e3504-fcc8-496e-9c48-1eedf97f6700",
+    "Job Title": "Chef",
+    "Job Code": "",
+    "Pay Basis": "SALARY",
+    "Default Wage": null,
+    "Tipped?": false,
+    "Cashier?": false,
+    "Driver?": false
+  },
+  {
+    "Applies To": "North Park Lounge - Murrysville",
+    "Job Id": "ff9719ea-996c-4683-8ec8-6150f8477d0b",
+    "Job Title": "Cook",
+    "Job Code": "",
+    "Pay Basis": "HOURLY",
+    "Default Wage": null,
+    "Tipped?": false,
+    "Cashier?": false,
+    "Driver?": false
+  },
+  {
+    "Applies To": "North Park Lounge - Murrysville",
+    "Job Id": "1e6cf1d1-ab9f-4796-baae-99270e5915ee",
+    "Job Title": "Delivery Service Driver",
+    "Job Code": "",
+    "Pay Basis": "HOURLY",
+    "Default Wage": null,
+    "Tipped?": false,
+    "Cashier?": false,
+    "Driver?": true
+  },
+  {
+    "Applies To": "North Park Lounge - Murrysville",
+    "Job Id": "5bc92932-ceef-41b1-81b8-61bdd6327f2f",
+    "Job Title": "Driver",
+    "Job Code": "",
+    "Pay Basis": "HOURLY",
+    "Default Wage": null,
+    "Tipped?": true,
+    "Cashier?": false,
+    "Driver?": true
+  },
+  {
+    "Applies To": "North Park Lounge - Murrysville",
+    "Job Id": "41c71ae3-abce-424d-ad03-df77e3c061ef",
+    "Job Title": "Expo",
+    "Job Code": "",
+    "Pay Basis": "HOURLY",
+    "Default Wage": null,
+    "Tipped?": false,
+    "Cashier?": false,
+    "Driver?": false
+  },
+  {
+    "Applies To": "North Park Lounge - Murrysville",
+    "Job Id": "d3f75904-b605-459a-81b2-15c66c9f5877",
+    "Job Title": "General Manager",
+    "Job Code": "",
+    "Pay Basis": "SALARY",
+    "Default Wage": null,
+    "Tipped?": false,
+    "Cashier?": false,
+    "Driver?": false
+  },
+  {
+    "Applies To": "North Park Lounge - Murrysville",
+    "Job Id": "208df1af-6b9e-4698-b4a3-0596b2b04abe",
+    "Job Title": "Host",
+    "Job Code": "",
+    "Pay Basis": "HOURLY",
+    "Default Wage": null,
+    "Tipped?": false,
+    "Cashier?": false,
+    "Driver?": false
+  },
+  {
+    "Applies To": "North Park Lounge - Murrysville",
+    "Job Id": "e96dade8-6a17-4b68-9092-105183d2d595",
+    "Job Title": "Owner",
+    "Job Code": "",
+    "Pay Basis": "SALARY",
+    "Default Wage": null,
+    "Tipped?": false,
+    "Cashier?": false,
+    "Driver?": false
+  },
+  {
+    "Applies To": "North Park Lounge - Murrysville",
+    "Job Id": "040af4ca-bfad-48b0-b199-4ee0eeb400ce",
+    "Job Title": "Runner",
+    "Job Code": "",
+    "Pay Basis": "HOURLY",
+    "Default Wage": null,
+    "Tipped?": false,
+    "Cashier?": false,
+    "Driver?": false
+  },
+  {
+    "Applies To": "North Park Lounge - Murrysville",
+    "Job Id": "0f09c5a9-9020-483b-b9e3-bcbf97be0d5a",
+    "Job Title": "Server",
+    "Job Code": "",
+    "Pay Basis": "HOURLY",
+    "Default Wage": null,
+    "Tipped?": true,
+    "Cashier?": false,
+    "Driver?": false
+  },
+  {
+    "Applies To": "North Park Lounge - Murrysville",
+    "Job Id": "15702686-9186-4cd4-ba5b-ed29337c3d52",
+    "Job Title": "Shift Manager / Assistant Manager",
+    "Job Code": "",
+    "Pay Basis": "SALARY",
+    "Default Wage": null,
+    "Tipped?": false,
+    "Cashier?": false,
+    "Driver?": false
+  },
+  {
+    "Applies To": "North Park Lounge - Murrysville",
+    "Job Id": "d3ff314e-829f-4e1d-bf82-caa4242fb154",
+    "Job Title": "Take Out",
+    "Job Code": "",
+    "Pay Basis": "HOURLY",
+    "Default Wage": null,
+    "Tipped?": true,
+    "Cashier?": true,
+    "Driver?": false
+  },
+  {
+    "Applies To": "North Park Lounge - Murrysville",
+    "Job Id": "3b8e430d-178a-47e5-a1af-4b5d1e1bcc9e",
+    "Job Title": "Training",
+    "Job Code": "Training",
+    "Pay Basis": "HOURLY",
+    "Default Wage": 7.25,
+    "Tipped?": false,
+    "Cashier?": false,
+    "Driver?": false
+  }
+]

@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar, faHouse, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar, faGears, faHouse, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 
 import '../assets/styles/Layout.scss';
@@ -39,11 +39,15 @@ const SideBarMenu = () => {
       </div>
       <div className="layout-main__sidebar--link" onClick={() => navigate('/employees')}>
         <FontAwesomeIcon icon={faUsers} className="layout-main__sidebar--link-icon" />
-        <div className="layout-main__sidebar--link-text">Employees</div>
+        <div className="layout-main__sidebar--link-text">People</div>
       </div>
       <div className="layout-main__sidebar--link" onClick={() => navigate('/schedule')}>
         <FontAwesomeIcon icon={faCalendar} className="layout-main__sidebar--link-icon" /> 
         <div className="layout-main__sidebar--link-text">Schedule</div> 
+      </div>
+      <div className="layout-main__sidebar--link" onClick={() => navigate('/settings')}>
+        <FontAwesomeIcon icon={faGears} className="layout-main__sidebar--link-icon" /> 
+        <div className="layout-main__sidebar--link-text">Settings</div> 
       </div>
     </section>
   )
