@@ -1,0 +1,12 @@
+[
+  {
+    "GUID": 1,
+    "name": "OPEN",
+    "description": "Open"
+  },
+  {
+    "GUID": 2,
+    "name": "CLOSED",
+    "description": "Closed"
+  }
+]

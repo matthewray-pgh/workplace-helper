@@ -1,22 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useDataResource } from '../hook/UseDataResource.jsx';
 
 import { LayoutMain } from '../components/Layout.jsx';
 
 import { EmployeesHeader } from './components/EmployeesHeader.jsx';
-import { useDataResource } from '../hook/UseDataResource.jsx';
 
 import './Employees.scss';
 
-const JobDescriptions = ['Chef', 'Cook', 'Runner', 'Bartender', 'Barback', 'Server', 'Busser', 'Take Out', 'Host', 'Shift Manager / Assistant Manager', 'General Manager', 'Owner', 'Driver', 'Delivery Service Driver', 'Training', 'Expo'];
-
 export const Employees = () => {
   const [ data, setData ] = useState([]);
+  const [ jobs, setJobs ] = useState([]); // for filtering data
   const [ selectedJobDescription, setSelectedJobDescription ] = useState(''); // for filtering data
   const [ filteredJobDescriptions, setFilteredJobDescriptions ] = useState([]);
 
-  const { data: initialData, isLoading, getAllData } = useDataResource('active-employees.json');
+  const { data: jobData } = useDataResource(`${window.location.origin}/restaurant-job.json`);
+  useEffect(() => {
+    if(jobData) {
+      const jobDescriptions = jobData.map(job => job.jobTitle);
+      setJobs(jobDescriptions);
+    }
+  },[jobData]);
 
+  const { data: initialData, isLoading, getAllData } = useDataResource('active-employees.json');
   useEffect(() => {
     setData(initialData);
   }, [initialData]);
@@ -69,7 +75,7 @@ export const Employees = () => {
                 value={selectedJobDescription}
               >
                 <option value="">--</option>
-                {JobDescriptions.map((jobDescription, i) => {
+                {jobs.map((jobDescription, i) => {
                   return (
                     <option key={i} value={jobDescription}>{jobDescription}</option>
                   )}

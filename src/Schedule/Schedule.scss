@@ -244,22 +244,13 @@
       color: $primary;
       text-align: center;
     
+      appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
     
       &:focus {
         outline: none;
       }
-    }
-
-    &--text-time {
-    }
-
-    &--text-section {
-    }
-
-    &--dropdown {
-      
     }
 
     &--remove-button {
