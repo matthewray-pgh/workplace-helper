@@ -52,7 +52,10 @@
   &__main-list-view {
     background-color: white;
     border-radius: 10px;
+    height: calc(100vh - 120px);
     padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
   }
   
   &__filter {
@@ -87,7 +90,7 @@
 
   &__list {
     overflow-y: auto;
-    height: calc(100vh - 180px);
+    height: calc(100vh - 240px);
 
     &--result-count {
       padding-top: 10px;
