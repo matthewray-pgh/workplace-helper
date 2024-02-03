@@ -5,7 +5,6 @@ import { faSquare, faSquarePlus, faSquareMinus } from '@fortawesome/free-regular
 import { faSquareCheck } from '@fortawesome/free-solid-svg-icons';
 
 import { useDataResource } from '../hook/UseDataResource.jsx';
-import { LayoutMain } from '../components/Layout.jsx';
 import { EmployeesHeader } from './components/EmployeesHeader.jsx';
 import './EmployeeDetails.scss';
 
@@ -120,10 +119,10 @@ export const EmployeeDetails = () => {
   };
 
   // loading screen
-  if(isLoading) return <LayoutMain><div>Loading...</div></LayoutMain>;
+  if(isLoading) return <div>Loading...</div>;
 
   return (
-    <LayoutMain>
+    <main>
       <EmployeesHeader />
         <section className="employee-details">
           <h1 className="employee-details__title">{employeeData.lastName}, {employeeData.firstName} - {employeeData.employeeID}</h1>
@@ -176,6 +175,6 @@ export const EmployeeDetails = () => {
           </section>
         </section>
         
-    </LayoutMain>
+    </main>
   );
 };
