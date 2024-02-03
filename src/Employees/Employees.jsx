@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useDataResource } from '../hook/UseDataResource.jsx';
 
-import { LayoutMain } from '../components/Layout.jsx';
-
 import { EmployeesHeader } from './components/EmployeesHeader.jsx';
 
 import './Employees.scss';
@@ -61,7 +59,7 @@ export const Employees = () => {
   }, [filteredJobDescriptions]);
 
   return (
-    <LayoutMain>
+    <main>
       <div className="employees">
         <EmployeesHeader />
 
@@ -96,7 +94,7 @@ export const Employees = () => {
           <ListContent data={data} isLoading={isLoading} />
         </div>
       </div>
-    </LayoutMain>
+    </main>
   );
 };
 

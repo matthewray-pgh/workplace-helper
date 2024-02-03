@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus, faFloppyDisk, faCalendarPlus, faWandMagicSparkles, faCalendar, faListCheck } from '@fortawesome/free-solid-svg-icons';
 
-import { LayoutMain } from '../components/Layout';
-
 import { useDataResource } from '../hook/UseDataResource';
 
 import './Schedule.scss';
@@ -146,7 +144,7 @@ export const Schedule = () => {
   };
 
   return (
-    <LayoutMain>
+    <main>
       <div className="schedule">
         <div className="schedule__title">Schedule</div>
   
@@ -212,7 +210,7 @@ export const Schedule = () => {
         </div>
         }
       </div>
-    </LayoutMain>
+    </main>
   );
 };
 
