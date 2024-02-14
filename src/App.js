@@ -14,6 +14,7 @@ import { Employees } from "./Employees/Employees.jsx";
 import { EmployeeDetails } from "./Employees/EmployeeDetails.jsx";
 import { Schedule } from "./Schedule/Schedule.jsx";
 import { Settings } from "./Settings/Settings.jsx";
+import { Admin } from "./Admin/Admin.jsx";
 
 import "./assets/styles/App.scss";
 
@@ -31,6 +32,8 @@ function App() {
               <Route path="/employees/:id" element={<EmployeeDetails />} />
               <Route path="/schedule" element={<Schedule />} />
               <Route path="/settings" element={<Settings />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="*" element={<h1>Not Found</h1>} />
             </Routes>
           </LayoutMain>
         )}
