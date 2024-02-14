@@ -1,0 +1,14 @@
+@import "../assets/styles/variables.scss";
+
+.settings {
+  &__redirect {
+    margin: 20px;
+    cursor: pointer;
+    color: $primary;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+}

@@ -9,11 +9,41 @@
       "UnauthRoleName": "amplify-amplify4c09f56d7faa4-staging-233746-unauthRole",
       "StackName": "amplify-amplify4c09f56d7faa4-staging-233746",
       "StackId": "arn:aws:cloudformation:us-east-1:881606831959:stack/amplify-amplify4c09f56d7faa4-staging-233746/118b3110-c224-11ee-9496-126d9b281ee7",
-      "AmplifyAppId": "d1ii3jr179kufn"
+      "AmplifyAppId": "d1ii3jr179kufn",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-amplify4c09f56d7faa4-staging-233746-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "auth": {
         "workplacehelper": {}
+      },
+      "storage": {
+        "activeemployees": {
+          "tableName": "active-employees",
+          "region": "us-east-1",
+          "arn": "arn:aws:dynamodb:us-east-1:881606831959:table/active-employees",
+          "partitionKeyName": "GUID",
+          "partitionKeyType": "S",
+          "sortKeyName": "LastName",
+          "sortKeyType": "S"
+        },
+        "employeeavailability": {
+          "tableName": "employee-availability",
+          "region": "us-east-1",
+          "arn": "arn:aws:dynamodb:us-east-1:881606831959:table/employee-availability",
+          "partitionKeyName": "GUID",
+          "partitionKeyType": "S",
+          "sortKeyName": "employeeID",
+          "sortKeyType": "S"
+        }
+      },
+      "function": {
+        "employeesLambda": {
+          "deploymentBucketName": "amplify-amplify4c09f56d7faa4-staging-233746-deployment",
+          "s3Key": "amplify-builds/employeesLambda-72573536766b44786f66-build.zip"
+        }
+      },
+      "api": {
+        "employeesApi": {}
       }
     }
   }
