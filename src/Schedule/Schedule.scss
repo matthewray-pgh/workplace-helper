@@ -1,14 +1,6 @@
 @import '../assets/styles/variables.scss';
 
 .schedule {
-  &__title {
-    color: $secondary;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0 auto;
-    padding: 20px 10px;
-  }
-
   &__control-panel {
     display: grid;
     grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
@@ -18,7 +10,6 @@
     margin: 10px 0;
     padding: 10px;
     background-color: white;
-    border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 
     font-size: 16px;
@@ -71,7 +62,6 @@
       background-color: $primary;
       color: white;
       border: none;
-      border-radius: 5px;
       padding: 10px;
       margin: 10px;
       font-size: 14px;
@@ -104,7 +94,6 @@
 
   &__grid {
     background-color: white;
-    border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 
     margin: 10px 0;
@@ -165,13 +154,15 @@
     }
 
     &--placeholder {
-      height: calc(100vh - 180px);
+      margin: 10px 0;
+      height: calc(100vh - 200px);
 
       display: flex;
       justify-content: center;
       align-items: center;
 
       color: $font-light;
+      border: solid 1px $font-light;
     }
   }
 }
@@ -181,7 +172,6 @@
     background-color: $background-light;
     color: $secondary;
     border: none;
-    border-radius: 5px;
     padding: 5px;
     font-size: 16px;
     font-weight: bold;
@@ -209,7 +199,6 @@
 
     background-color: $primary-opacity;
     border: $primary solid 1px;
-    border-radius: 5px;
 
     &--fields {
       display: grid;

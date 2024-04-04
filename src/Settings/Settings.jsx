@@ -6,7 +6,6 @@ export const Settings = () => {
 
   return (
     <main>
-      <h1>Settings</h1>
       <div className="settings">
         <div className="settings__item">
           Shifts

@@ -1,0 +1,68 @@
+@import '../assets/styles/variables.scss';
+
+.shift {
+
+  &__name {
+    padding: 10px;
+    border-bottom: solid 1px #ccc;
+  }
+
+  &__header {
+    padding: 10px;
+    border-bottom: solid 1px #ccc;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    &:nth-child(even) {
+      background-color: #edecec;
+    }
+  }
+
+  &__section {
+    background-color: white;
+    height: calc(100vh - 200px);
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: scroll;
+  }
+
+  &__employee {
+    display: grid;
+    grid-template-columns: 2fr repeat(7, 1fr);
+    align-items: center;
+
+    border-bottom: solid 1px #ccc;
+    padding: 0 5px;
+  }
+
+  &__cell {
+    display: grid;
+    grid-template-columns: repeat(3, 25px);
+    align-items: center;
+    justify-items: center;
+
+    height: 40px;
+    padding: 0 5px;
+
+    &:nth-child(even) {
+      background-color: #edecec;
+    }
+  }
+
+  &__icon {
+    color: $primary;
+    font-size: 20px;
+  }
+
+  &__no-position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px;
+    height: calc(100vh - 140px);
+    border: solid 1px #ababab;
+    color: #ababab;
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {"id": "001", "name": "Employee 1", "shifts": [
+    {"day": 0, "all": false, "am": false, "pm": false}, 
+    {"day": 1, "all": false, "am": false, "pm": false},
+    {"day": 2, "all": false, "am": false, "pm": false},
+    {"day": 3, "all": false, "am": false, "pm": false},
+    {"day": 4, "all": false, "am": false, "pm": false},
+    {"day": 5, "all": false, "am": false, "pm": false},
+    {"day": 6, "all": false, "am": false, "pm": false}
+  ]},
+  {"id": "002", "name": "Employee 2", "shifts": [
+    {"day": 0, "all": false, "am": false, "pm": false}, 
+    {"day": 1, "all": false, "am": false, "pm": false},
+    {"day": 2, "all": false, "am": false, "pm": false},
+    {"day": 3, "all": false, "am": false, "pm": false},
+    {"day": 4, "all": false, "am": false, "pm": false},
+    {"day": 5, "all": false, "am": false, "pm": false},
+    {"day": 6, "all": false, "am": false, "pm": false}
+  ]}
+]

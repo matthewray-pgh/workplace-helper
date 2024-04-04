@@ -2,15 +2,15 @@ import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar, faGears, faGaugeHigh, faUsers, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar, faGears, faGaugeHigh, faUsers, faClockFour } from '@fortawesome/free-solid-svg-icons';
 
 import '../assets/styles/Layout.scss';
 
-export const LayoutMain = ({signOut, user, children}) => {
+export const LayoutMain = ({children}) => {
   const {pathname} = useLocation();
   return (
     <div className="layout-main">
-      <Sidebar signOut={signOut} user={user}/>
+      <Sidebar/>
       <section className="layout-main__content">
         <h1>{pathname}</h1>
         {children}
@@ -19,18 +19,18 @@ export const LayoutMain = ({signOut, user, children}) => {
   );
 };
 
-const Sidebar = ({signOut, user}) => {
+const Sidebar = () => {
   return (
     <section className="layout-main__sidebar">
       <div className="layout-main__sidebar--header">
         App Name
       </div>
-      <SideBarMenu signOut={signOut} user={user}/>
+      <SideBarMenu/>
     </section>
   );
 }
 
-const SideBarMenu = ({signOut, user}) => {
+const SideBarMenu = () => {
   const navigate = useNavigate();
   return (
     <section className="layout-main__sidebar--menu">
@@ -46,13 +46,13 @@ const SideBarMenu = ({signOut, user}) => {
         <FontAwesomeIcon icon={faCalendar} className="layout-main__sidebar--link-icon" /> 
         <div className="layout-main__sidebar--link-text">Schedule</div> 
       </div>
+      <div className="layout-main__sidebar--link" onClick={() => navigate('/shifts')}>
+        <FontAwesomeIcon icon={faClockFour} className="layout-main__sidebar--link-icon" /> 
+        <div className="layout-main__sidebar--link-text">Shifts</div> 
+      </div>
       <div className="layout-main__sidebar--link" onClick={() => navigate('/settings')}>
         <FontAwesomeIcon icon={faGears} className="layout-main__sidebar--link-icon" /> 
         <div className="layout-main__sidebar--link-text">Settings</div> 
-      </div>
-      <div className="layout-main__sidebar--link" onClick={() => signOut()}>
-        <FontAwesomeIcon icon={faRightFromBracket} className="layout-main__sidebar--link-icon" /> 
-        <div className="layout-main__sidebar--link-text">Log Out</div> 
       </div>
     </section>
   )

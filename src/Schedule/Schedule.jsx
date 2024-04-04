@@ -146,7 +146,6 @@ export const Schedule = () => {
   return (
     <main>
       <div className="schedule">
-        <div className="schedule__title">Schedule</div>
   
         <ScheduleControlPanel 
           job={job}
@@ -204,8 +203,7 @@ export const Schedule = () => {
         :
         <div className="schedule__grid--placeholder">
           <div>
-            <FontAwesomeIcon icon={faCalendarPlus} />
-            <div className="schedule__grid--placeholder-text">Create a schedule</div>
+            <h2>Create a schedule</h2>
           </div>
         </div>
         }

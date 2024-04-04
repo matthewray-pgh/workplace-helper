@@ -1,14 +1,9 @@
 import React from "react";
 
-import { Amplify } from "aws-amplify";
-
-import { Authenticator } from "@aws-amplify/ui-react";
-import "@aws-amplify/ui-react/styles.css";
-import config from "./amplifyconfiguration.json";
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { LayoutMain } from "./components/Layout";
+import { Shifts } from "./Shifts/Shifts.jsx";
 import { Dashboard } from "./Dashboard/Dashboard.jsx";
 import { Employees } from "./Employees/Employees.jsx";
 import { EmployeeDetails } from "./Employees/EmployeeDetails.jsx";
@@ -18,26 +13,21 @@ import { Admin } from "./Admin/Admin.jsx";
 
 import "./assets/styles/App.scss";
 
-Amplify.configure(config);
-
 function App() {
   return (
     <BrowserRouter>
-      <Authenticator hideSignUp={true}>
-        {({ signOut, user }) => (
-          <LayoutMain signOut={signOut} user={user}>
-            <Routes>
-              <Route path="/" element={<Dashboard user={user} />} />
-              <Route path="/employees" element={<Employees />} />
-              <Route path="/employees/:id" element={<EmployeeDetails />} />
-              <Route path="/schedule" element={<Schedule />} />
-              <Route path="/settings" element={<Settings />} />
-              <Route path="/admin" element={<Admin />} />
-              <Route path="*" element={<h1>Not Found</h1>} />
-            </Routes>
-          </LayoutMain>
-        )}
-      </Authenticator>
+      <LayoutMain>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/employees" element={<Employees />} />
+          <Route path="/employees/:id" element={<EmployeeDetails />} />
+          <Route path="/shifts" element={<Shifts />} />
+          <Route path="/schedule" element={<Schedule />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="*" element={<h1>Not Found</h1>} />
+        </Routes>
+      </LayoutMain>
     </BrowserRouter>
   );
 }

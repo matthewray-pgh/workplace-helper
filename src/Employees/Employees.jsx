@@ -61,8 +61,6 @@ export const Employees = () => {
   return (
     <main>
       <div className="employees">
-        <EmployeesHeader />
-
         <div className="employees__main-list-view">
           <section>
             <div>
