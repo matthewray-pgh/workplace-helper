@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { LayoutMain } from "./components/Layout";
+import { Shifts } from "./Shifts/Shifts.jsx";
 import { Dashboard } from "./Dashboard/Dashboard.jsx";
 import { Employees } from "./Employees/Employees.jsx";
 import { EmployeeDetails } from "./Employees/EmployeeDetails.jsx";
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/employees" element={<Employees />} />
           <Route path="/employees/:id" element={<EmployeeDetails />} />
+          <Route path="/shifts" element={<Shifts />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/admin" element={<Admin />} />

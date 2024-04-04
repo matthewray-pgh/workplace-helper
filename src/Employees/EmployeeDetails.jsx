@@ -123,58 +123,56 @@ export const EmployeeDetails = () => {
 
   return (
     <main>
-      <EmployeesHeader />
-        <section className="employee-details">
-          <h1 className="employee-details__title">{employeeData.lastName}, {employeeData.firstName} - {employeeData.employeeID}</h1>
+      <section className="employee-details">
+        <h1 className="employee-details__title">{employeeData.lastName}, {employeeData.firstName} - {employeeData.employeeID}</h1>
 
-          <section className="employee-details__section">
-            <h2>Contact Information</h2>
-            <div>Phone Number: {employeeData.phoneNumber}</div>
-            <div>Email: {employeeData.email}</div>
-          </section>
-          
-          <section className="employee-details__section">
-            <h2>Job(s) Availability</h2>
-
-            <div>
-              <h3>
-                <FontAwesomeIcon icon={faSquareMinus} />
-                <span style={{paddingLeft: '10px'}}>All</span>
-              </h3>
-              <div className="employee-details__availability">
-                <div>SUN</div>
-                <div>MON</div>
-                <div>TUE</div>
-                <div>WED</div>
-                <div>THU</div>
-                <div>FRI</div>
-                <div>SAT</div>
-
-                {employeeData.availability && employeeData.availability.map((day, dayIndex) => (
-                  <div key={dayIndex} className="employee-details__availability--day">
-                    {day.shifts.map((shift, shiftIndex) => (
-                      <div key={shiftIndex} 
-                        className="employee-details__availability--shift" 
-                        onClick={(e) => handleAvailableClick(e)}>
-                        <FontAwesomeIcon className="employee-details__availability--icon"
-                          icon={shift.available ? faSquareCheck : faSquare} />
-                      </div>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* TODO: add job level availability */}
-            {employeeData.jobs && employeeData.jobs.map((job, index) => (
-              <h3 key={index}>
-                <FontAwesomeIcon icon={faSquarePlus} />
-                <span style={{paddingLeft: '10px'}}>{job.jobDescription}</span>
-              </h3>
-            ))}
-          </section>
+        <section className="employee-details__section">
+          <h2>Contact Information</h2>
+          <div>Phone Number: {employeeData.phoneNumber}</div>
+          <div>Email: {employeeData.email}</div>
         </section>
         
+        <section className="employee-details__section">
+          <h2>Job(s) Availability</h2>
+
+          <div>
+            <h3>
+              <FontAwesomeIcon icon={faSquareMinus} />
+              <span style={{paddingLeft: '10px'}}>All</span>
+            </h3>
+            <div className="employee-details__availability">
+              <div>SUN</div>
+              <div>MON</div>
+              <div>TUE</div>
+              <div>WED</div>
+              <div>THU</div>
+              <div>FRI</div>
+              <div>SAT</div>
+
+              {employeeData.availability && employeeData.availability.map((day, dayIndex) => (
+                <div key={dayIndex} className="employee-details__availability--day">
+                  {day.shifts.map((shift, shiftIndex) => (
+                    <div key={shiftIndex} 
+                      className="employee-details__availability--shift" 
+                      onClick={(e) => handleAvailableClick(e)}>
+                      <FontAwesomeIcon className="employee-details__availability--icon"
+                        icon={shift.available ? faSquareCheck : faSquare} />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* TODO: add job level availability */}
+          {employeeData.jobs && employeeData.jobs.map((job, index) => (
+            <h3 key={index}>
+              <FontAwesomeIcon icon={faSquarePlus} />
+              <span style={{paddingLeft: '10px'}}>{job.jobDescription}</span>
+            </h3>
+          ))}
+        </section>
+      </section>
     </main>
   );
 };

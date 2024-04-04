@@ -1,12 +1,12 @@
 [
   {
     "GUID": 1,
-    "name": "OPEN",
-    "description": "Open"
+    "name": "AM",
+    "description": "open in the morning"
   },
   {
     "GUID": 2,
-    "name": "CLOSED",
-    "description": "Closed"
+    "name": "PM",
+    "description": "closing in the evening"
   }
 ]
