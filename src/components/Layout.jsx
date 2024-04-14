@@ -1,23 +1,86 @@
-import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar, faGears, faGaugeHigh, faUsers, faClockFour } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar, faGears, faGaugeHigh, faUsers, faClockFour, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import '../assets/styles/Layout.scss';
 
 export const LayoutMain = ({children}) => {
-  const {pathname} = useLocation();
   return (
     <div className="layout-main">
+      <MobileHeaderBar />
       <Sidebar/>
       <section className="layout-main__content">
-        <h1>{pathname}</h1>
         {children}
       </section>
     </div>
   );
 };
+
+const MobileHeaderBar = () => {
+  const [ showMenu, setShowMenu ] = useState(false);
+
+  const handleMenuToggle = () => {
+    setShowMenu(!showMenu);
+  };
+
+  return (
+    <>
+    <section className="layout-main__mobile-header">
+      <div className="layout-main__mobile-header--header">
+        App Name
+      </div>
+      <div>
+        <FontAwesomeIcon icon={showMenu ? faTimes: faBars} 
+          className="layout-main__mobile-header--link-icon" 
+          onClick={() => handleMenuToggle()}/>
+      </div>
+    </section>
+
+    <section className={`layout-main__mobile-nav-menu ${showMenu ? 
+      "layout-main__mobile-nav-menu--show" : 
+      "layout-main__mobile-nav-menu--hide"}`}>
+      {showMenu && <MobileNavMenu menuToggleFunc={handleMenuToggle}/>}
+    </section>
+    </>
+  )
+}
+
+const MobileNavMenu = ({menuToggleFunc}) => {
+
+  const navigate = useNavigate();
+
+  const handleMenuItemClick =(path) => {
+    navigate(path);
+    menuToggleFunc();
+  }
+
+  return (
+    <section className="layout-main__mobile-nav">
+      <div className="layout-main__mobile-nav--link" onClick={() => handleMenuItemClick('/')}>
+        <FontAwesomeIcon icon={faGaugeHigh} className="layout-main__mobile-nav--link-icon" />
+        <div className="layout-main__mobile-nav--link-text">Dashboard</div>
+      </div>
+      <div className="layout-main__mobile-nav--link" onClick={() => handleMenuItemClick('/employees')}>
+        <FontAwesomeIcon icon={faUsers} className="layout-main__mobile-nav--link-icon" />
+        <div className="layout-main__mobile-nav--link-text">People</div>
+      </div>
+      <div className="layout-main__mobile-nav--link" onClick={() => handleMenuItemClick('/schedule')}>
+        <FontAwesomeIcon icon={faCalendar} className="layout-main__mobile-nav--link-icon" /> 
+        <div className="layout-main__mobile-nav--link-text">Schedule</div> 
+      </div>
+      <div className="layout-main__mobile-nav--link" onClick={() => handleMenuItemClick('/shifts')}>
+        <FontAwesomeIcon icon={faClockFour} className="layout-main__mobile-nav--link-icon" /> 
+        <div className="layout-main__mobile-nav--link-text">Shifts</div> 
+      </div>
+      <div className="layout-main__mobile-nav--link" onClick={() => handleMenuItemClick('/settings')}>
+        <FontAwesomeIcon icon={faGears} className="layout-main__mobile-nav--link-icon" /> 
+        <div className="layout-main__mobile-nav--link-text">Settings</div> 
+      </div>
+    </section>
+  )
+}
 
 const Sidebar = () => {
   return (
